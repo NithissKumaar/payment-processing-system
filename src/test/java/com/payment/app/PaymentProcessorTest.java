@@ -2,7 +2,6 @@ package com.payment.app;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-// ADD THIS IMPORT (Adjust if your package name is different)
 import com.payment.PaymentProcessor; 
 
 public class PaymentProcessorTest {
@@ -10,17 +9,19 @@ public class PaymentProcessorTest {
 
     @Test
     void testSuccessfulPayment() {
-        // Ensure the method name matches (is it 'process' or 'processPayment'?)
-        assertTrue(processor.process(100.0, "1234567890123456"));
+        // Change 'process' to 'processPayment'
+        assertTrue(processor.processPayment(100.0, "1234567890123456"));
     }
 
     @Test
     void testInvalidAmount() {
-        assertFalse(processor.process(-10.0, "1234567890123456"));
+        // Change 'process' to 'processPayment'
+        assertFalse(processor.processPayment(-10.0, "1234567890123456"));
     }
 
     @Test
     void testInvalidCard() {
-        assertFalse(processor.process(100.0, "12345"));
+        // Change 'process' to 'processPayment'
+        assertFalse(processor.processPayment(100.0, "12345"));
     }
 }
